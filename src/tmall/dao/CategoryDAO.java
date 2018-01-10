@@ -71,6 +71,9 @@ public class CategoryDAO {
         }
         return bean;
     }
+    public List<Category> list(){
+        return list(0,Integer.MAX_VALUE);
+    }
     public List<Category> list(int start,int count){
         List<Category> beans=new ArrayList<Category>();
         String sql="select * from category order by id desc limit ?,?";
